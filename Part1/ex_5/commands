@@ -1,0 +1,5 @@
+sudo docker run -d -it --name alpine devopsdockeruh/simple-web-service:alpine
+sudo docker run -d -it --name ubuntu devopsdockeruh/simple-web-service:ubuntu
+sudo docker exec -it alpine sh 
+tail -f ./text.log #everything seems to work
+
