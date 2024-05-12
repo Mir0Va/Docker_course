@@ -1,0 +1,2 @@
+sudo docker run -d -it --name app devopsdockeruh/simple-web-service:ubuntu
+sudo docker exec app tail -f ./text.log

@@ -1,0 +1,11 @@
+sudo docker run -d -it --name ubunt ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+
+sudo docker exec ubunt apt-get update
+
+sudo docker exec ubunt apt-get install -y curl
+
+sudo docker attach ubunt
+
+
+Another way to do this is to add the install commands to the beginning of the bash script:
+sudo docker run -it ubuntu sh -c 'apt-get update; apt-get install -y curl; while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
